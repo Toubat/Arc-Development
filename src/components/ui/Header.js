@@ -76,6 +76,9 @@ const useStyles = makeStyles((theme) => ({
     marginLeft: 15,
     marginRight: 25,
     height: 45,
+    "&:hover": {
+      background: theme.palette.secondary.light,
+    },
   },
   menu: {
     background: theme.palette.common.blue,
@@ -118,16 +121,19 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-export default function Header() {
+export default function Header({
+  value,
+  setValue,
+  selectedIdx,
+  setSelectedIdx,
+}) {
   const classes = useStyles();
   const theme = useTheme();
   const iOS = process.browser && /iPad|iPhone|iPod/.test(navigator.userAgent);
   const matches = useMediaQuery(theme.breakpoints.down("md"));
 
-  const [value, setValue] = useState(0);
   const [anchorEl, setAnchorEl] = useState(null);
   const [openMenu, setOpenMenu] = useState(false);
-  const [selectedIdx, setSelectedIdx] = useState(0);
   const [openDrawer, setOpenDrawer] = useState(false);
 
   const menuOptions = [
