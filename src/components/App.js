@@ -7,6 +7,11 @@ import theme from "./ui/Theme";
 import Header from "./ui/Header";
 import Footer from "./ui/Footer";
 import LandingPage from "./LandingPage";
+import Services from "./Services";
+import CustomSoftware from "./CustomSoftware";
+import About from "./About";
+import Contact from "./Contact";
+import Estimate from "./Estimate";
 
 function App() {
   const [selectedIdx, setSelectedIdx] = useState(0);
@@ -22,12 +27,38 @@ function App() {
           setSelectedIdx={setSelectedIdx}
         />
         <Switch>
-          <Route exact path="/" component={LandingPage} />
-          <Route exact path="/services" component={() => <div>Services</div>} />
+          <Route
+            exact
+            path="/"
+            render={(props) => (
+              <LandingPage
+                {...props}
+                setValue={setValue}
+                setSelectedIdx={setSelectedIdx}
+              />
+            )}
+          />
+          <Route
+            exact
+            path="/services"
+            render={(props) => (
+              <Services
+                {...props}
+                setValue={setValue}
+                setSelectedIdx={setSelectedIdx}
+              />
+            )}
+          />
           <Route
             exact
             path="/customsoftware"
-            component={() => <div>Custom Software</div>}
+            render={(props) => (
+              <CustomSoftware
+                {...props}
+                setValue={setValue}
+                setSelectedIdx={setSelectedIdx}
+              />
+            )}
           />
           <Route
             exact
@@ -40,9 +71,39 @@ function App() {
             path="/revolution"
             component={() => <div>Revolution</div>}
           />
-          <Route exact path="/about" component={() => <div>About</div>} />
-          <Route exact path="/contact" component={() => <div>Contact</div>} />
-          <Route exact path="/estimate" component={() => <div>Estimate</div>} />
+          <Route
+            exact
+            path="/about"
+            render={(props) => (
+              <About
+                {...props}
+                setValue={setValue}
+                setSelectedIdx={setSelectedIdx}
+              />
+            )}
+          />
+          <Route
+            exact
+            path="/contact"
+            render={(props) => (
+              <Contact
+                {...props}
+                setValue={setValue}
+                setSelectedIdx={setSelectedIdx}
+              />
+            )}
+          />
+          <Route
+            exact
+            path="/estimate"
+            render={(props) => (
+              <Estimate
+                {...props}
+                setValue={setValue}
+                setSelectedIdx={setSelectedIdx}
+              />
+            )}
+          />
         </Switch>
         <Footer
           value={value}

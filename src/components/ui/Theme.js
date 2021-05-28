@@ -37,16 +37,32 @@ const theme = createMuiTheme({
       color: `${arcBlue}`,
       lineHeight: 1.5,
     },
+    h3: {
+      fontFamily: "Pacifico",
+      fontSize: "2.5rem",
+      color: arcBlue,
+    },
     h4: {
       fontFamily: "Raleway",
       fontSize: "1.75rem",
       color: `${arcBlue}`,
       fontWeight: 700,
     },
+    h6: {
+      fontFamily: "Raleway",
+      color: `${arcBlue}`,
+      fontWeight: 500,
+      lineHeight: 1,
+    },
     subtitle1: {
       fontSize: "1.25rem",
       fontWeight: 300,
       color: `${arcGrey}`,
+    },
+    subtitle2: {
+      color: " white",
+      fontSize: "1.25rem",
+      fontWeight: 300,
     },
     learnButton: {
       borderColor: `${arcBlue}`,
@@ -56,6 +72,38 @@ const theme = createMuiTheme({
       borderRadius: 50,
       fontFamily: "Roboto",
       fontWeight: "bold",
+    },
+    body1: {
+      fontSize: "1.24rem",
+      color: arcGrey,
+      fontWeight: 300,
+    },
+    caption: {
+      fontSize: "1em",
+      fontWeight: 300,
+      color: arcGrey,
+    },
+  },
+  overrides: {
+    MuiInputLabel: {
+      root: {
+        color: arcBlue,
+        fontSize: "1rem",
+      },
+    },
+    MuiInput: {
+      root: {
+        color: arcGrey,
+        fontWeight: 300,
+      },
+      underline: {
+        "&:before": {
+          borderBottom: `2px solid ${arcBlue}`,
+        },
+        "&:hover:not($disabled):not($focused):not($error):before": {
+          borderBottom: `2px solid ${arcBlue}`,
+        },
+      },
     },
   },
 });

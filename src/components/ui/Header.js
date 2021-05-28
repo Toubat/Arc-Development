@@ -88,6 +88,7 @@ const useStyles = makeStyles((theme) => ({
   menuItem: {
     ...theme.typography.tab,
     opacity: 0.7,
+    color: "white",
     "&:hover": {
       opacity: 1,
     },
@@ -190,6 +191,9 @@ export default function Header({
               setSelectedIdx(route.selectedIndex);
             }
           }
+          break;
+        case "/estimate":
+          setValue(5);
           break;
         default:
           break;
@@ -349,6 +353,8 @@ export default function Header({
       </IconButton>
     </React.Fragment>
   );
+
+  console.log(selectedIdx, value);
 
   return (
     <React.Fragment>
