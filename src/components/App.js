@@ -12,6 +12,7 @@ import CustomSoftware from "./CustomSoftware";
 import About from "./About";
 import Contact from "./Contact";
 import Estimate from "./Estimate";
+import ProjectManager from "./ProjectManager";
 
 function App() {
   const [selectedIdx, setSelectedIdx] = useState(0);
@@ -98,6 +99,17 @@ function App() {
             path="/estimate"
             render={(props) => (
               <Estimate
+                {...props}
+                setValue={setValue}
+                setSelectedIdx={setSelectedIdx}
+              />
+            )}
+          />
+          <Route
+            exact
+            path="/manager"
+            render={(props) => (
+              <ProjectManager
                 {...props}
                 setValue={setValue}
                 setSelectedIdx={setSelectedIdx}

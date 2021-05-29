@@ -30,6 +30,13 @@ const theme = createMuiTheme({
       textTransform: "none",
       color: "white",
     },
+    h1: {
+      fontFamily: "Raleway",
+      fontWeight: 800,
+      fontSize: "3rem",
+      color: `${arcBlue}`,
+      lineHeight: 1.5,
+    },
     h2: {
       fontFamily: "Raleway",
       fontWeight: 700,
@@ -103,6 +110,15 @@ const theme = createMuiTheme({
         "&:hover:not($disabled):not($focused):not($error):before": {
           borderBottom: `2px solid ${arcBlue}`,
         },
+      },
+    },
+    MuiFormControlLabel: {
+      label: {
+        color: arcBlue,
+        fontWeight: 700,
+      },
+      labelPlacementStart: {
+        marginLeft: 0,
       },
     },
   },
