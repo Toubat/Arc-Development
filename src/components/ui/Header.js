@@ -309,35 +309,6 @@ export default function Header({
           </Grow>
         )}
       </Popper>
-      {/* <Menu
-        id="simple-menu"
-        anchorEl={anchorEl}
-        open={openMenu}
-        onClose={handleClose}
-        MenuListProps={{ onMouseLeave: handleClose }}
-        classes={{ paper: classes.menu }}
-        elevation={0}
-        style={{ zIndex: 1302 }}
-        keepMounted
-      >
-        {menuOptions.map((option, i) => {
-          return (
-            <MenuItem
-              key={`MenuItem-${i}`}
-              component={Link}
-              to={option.link}
-              classes={{ root: classes.menuItem }}
-              onClick={(e) => {
-                handleMenuItemClick(e, i);
-                setValue(1);
-              }}
-              selected={selectedIdx === i && value === 1}
-            >
-              {option.name}
-            </MenuItem>
-          );
-        })}
-      </Menu> */}
     </React.Fragment>
   );
 
